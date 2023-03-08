@@ -17,7 +17,7 @@ _ICT기획부 선임 임형우_
 
 ---
 
-# 자신의 앱을 배포하려는 개발자 L씨...
+## 자신의 앱을 배포하려는 개발자 L씨...
 
 1. 장비 구매
 2. 관련 지식 공부
@@ -25,7 +25,7 @@ _ICT기획부 선임 임형우_
 
 ---
 
-# 하지만 문제가 터지는데...
+## 하지만 문제가 터지는데...
 
 1. 미묘하게 다른 개발 환경으로 인한 버그 발생 - 'it works on my machine'
 2. 가상 머신의 한계 (e.g. 속도, 비용, etc...)
@@ -35,42 +35,66 @@ _ICT기획부 선임 임형우_
 
 ---
 
-# 결국...
+## 결국...
 
 ![w:500](./misery.jpeg)
 
 ---
 
-# 컨테이너
+## 컨테이너
 
 ![w:700 center](./vm_container.png)
 
 ---
 
-![w:600px center](./docker.png)
+![w:600 center](./docker.png)
 
 ---
 
-# 주요 개념
+## ![center](./d_architecture.svg)
+
+---
+
+## Docker Objects
 
 - 이미지
 - 컨테이너
 - 볼륨
+- 네트워크
 
 ---
 
-# 단점
+## Docker Hub
 
-1.
-
----
-
-# 컨테이너 오케스트레이션 (Container Orchestration)
+![w:800 center](./docker_hub.png)
 
 ---
 
-# 쿠버네티스
+## 한계
 
 ---
 
+## 컨테이너 오케스트레이션 (Container Orchestration)
+
 ---
+
+![w:500 center](./k8s.png)
+
+---
+
+![w:1100 center](./k8s_architecture.svg)
+
+---
+
+## 정리
+
+| 요소   | On-premise | Container (Docker) | Orchestration (k8s) |
+| ------ | ---------- | ------------------ | ------------------- |
+| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
+| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
+| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
+| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
+
+---
+
+## EOF
