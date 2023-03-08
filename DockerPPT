@@ -1,0 +1,76 @@
+---
+marp: true
+theme: gaia
+class: invert
+---
+
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+# Docker & k8s : 컨테이너 기술에 대한 설명과 등장 배경
+
+_ICT기획부 선임 임형우_
+
+---
+
+# 자신의 앱을 배포하려는 개발자 L씨...
+
+1. 장비 구매
+2. 관련 지식 공부
+3. 서버 구축
+
+---
+
+# 하지만 문제가 터지는데...
+
+1. 미묘하게 다른 개발 환경으로 인한 버그 발생 - 'it works on my machine'
+2. 가상 머신의 한계 (e.g. 속도, 비용, etc...)
+3. while (**install 더블 클릭 - 확인 - 확인 - 수락 - ...**)
+4. 각 OS에서 테스트 - 각 OS에 필요한 다른 의존성들
+5. 서버비 부담
+
+---
+
+# 결국...
+
+![w:500](./misery.jpeg)
+
+---
+
+# 컨테이너
+
+![w:700 center](./vm_container.png)
+
+---
+
+![w:600px center](./docker.png)
+
+---
+
+# 주요 개념
+
+- 이미지
+- 컨테이너
+- 볼륨
+
+---
+
+# 단점
+
+1.
+
+---
+
+# 컨테이너 오케스트레이션 (Container Orchestration)
+
+---
+
+# 쿠버네티스
+
+---
+
+---
