@@ -19,25 +19,13 @@ _ICT기획부 선임 임형우_
 
 ## 자신의 앱을 배포하려는 개발자 L씨...
 
-1. 장비 구매
-2. 관련 지식 공부
-3. 서버 구축
-
----
-
-## 하지만 문제가 터지는데...
-
 1. 미묘하게 다른 개발 환경으로 인한 버그 발생 - 'it works on my machine'
-2. 가상 머신의 한계 (e.g. 속도, 비용, etc...)
-3. while (**install 더블 클릭 - 확인 - 확인 - 수락 - ...**)
-4. 각 OS에서 테스트 - 각 OS에 필요한 다른 의존성들
-5. 서버비 부담
+2. while (**install - 확인 - 확인 - 수락 - ...**)
+3. 가상 머신의 한계 (e.g. 속도, 비용, etc...)
+4. 각 OS에서 테스트 - 서로 다른 의존성들
+5. 장비 값 부담
 
----
-
-## 결국...
-
-![w:500](./misery.jpeg)
+#### 위의 문제를 어떻게 해결하면 좋을까요?
 
 ---
 
@@ -47,11 +35,13 @@ _ICT기획부 선임 임형우_
 
 ---
 
-![w:600 center](./docker.png)
+![w:650 center](./docker.png)
 
 ---
 
-## ![center](./d_architecture.svg)
+## 도커 아키텍처
+
+![h:500 center](./d_architecture.svg)
 
 ---
 
@@ -64,17 +54,47 @@ _ICT기획부 선임 임형우_
 
 ---
 
-## Docker Hub
+## 이미지
 
-![w:800 center](./docker_hub.png)
+![h:400 center](./docker_img.png)
 
----
-
-## 한계
+- **read-only**, **레이어 구조**, **쉬운 공유**, **빌드에 사용됨**, **스냅 샷**
 
 ---
 
-## 컨테이너 오케스트레이션 (Container Orchestration)
+## 컨테이너
+
+![h:400 center](./docker_container.png)
+
+- **namespaces**, **cgroup**
+
+---
+
+## Recap : 도커 아키텍처
+
+`$ docker run -i -t ubuntu /bin/bash`
+
+## ![h:400 center](./d_architecture.svg)
+
+---
+
+## 또 다른 문제에 봉착한 개발자 L씨...
+
+- 로드 밸런싱
+- 컨테이너 관리 자동화
+- Scale Out의 어려움
+- ㅠㅠ
+
+---
+
+## 컨테이너 오케스트레이션
+
+`컨테이너화 된 애플리케이션에 대한 자동화된 설정, 관리 및 제어 체계`
+
+1. 배포 관리
+2. 제어 및 모니터링
+3. 스케일링
+4. 네트워킹
 
 ---
 
@@ -82,19 +102,49 @@ _ICT기획부 선임 임형우_
 
 ---
 
-![w:1100 center](./k8s_architecture.svg)
+## 쿠버네티스 핵심 설계 사상
+
+1. 선언적 구성 기반의 배포 환경
+2. 기능 단위의 분산
+3. 클러스터 단위 중앙 제어
+4. 동적 그룹화
+5. API 기반 상호작용
 
 ---
 
-## 정리
+## 선언적 구성 기반의 배포 환경
 
-| 요소   | On-premise | Container (Docker) | Orchestration (k8s) |
-| ------ | ---------- | ------------------ | ------------------- |
-| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
-| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
-| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
-| ㅁㄴㅇ | ㅁㄴㅇ     | ㅁㄴㅇ             | ㅁㄴㅇ              |
+![w:1100 center](./declarative.jpg)
 
 ---
 
-## EOF
+## 기능 단위의 분산
+
+![w:900 center](./kube-controller.png)
+
+---
+
+## 클러스터 단위 중앙 제어
+
+![w:700 center](./cluster.png)
+
+---
+
+## 동적 그룹화
+
+![w:900 center](./labels.png)
+
+---
+
+## API 기반 상호작용
+
+![w:600 center](./apiserver.png)
+
+---
+
+# EOF
+
+- https://docs.docker.com/
+- https://kubernetes.io/ko/docs/concepts/
+- https://seongjin.me/kubernetes-core-concepts/
+- https://m.blog.naver.com/shakey7/221600166205
